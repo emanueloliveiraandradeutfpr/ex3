@@ -4,6 +4,11 @@ import React from "react";
 export default function Login() {
   const [username, setUsername] = React.useState("");
   const [password, setPassword] = React.useState("");
+
+  const login = () => {
+    console.log(username);
+    console.log(password);
+  };
   return (
     <View style={styles.container}>
       <TextInput
@@ -20,14 +25,7 @@ export default function Login() {
         secureTextEntry
       />
 
-      <Button
-        title="Logar"
-        color="#841584"
-        onPress={() => {
-          console.log(username);
-          console.log(password);
-        }}
-      />
+      <Button title="Logar" color="#841584" onPress={login} />
     </View>
   );
 }
